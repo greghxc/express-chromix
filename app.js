@@ -24,6 +24,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// basic auth
+var basicAuth = require('express-basic-auth')
+app.use(basicAuth({
+    users: { 'admin': 'supersecret' },
+    challenge: true,
+    realm: 'express-chromix'
+}))
+
 // swagger-docs
 var options = {
   swaggerDefinition: {

@@ -28,8 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 var options = {
   swaggerDefinition: {
     info: {
-      title: 'Express Chromix-Too', // Title (required) 
-      version: '1.0.0', // Version (required) 
+      title: 'Express Chromix-Too',
+      version: '1.0.0',
+      description: 'Exposure of Chrome\'s tab API',
+      path: '/',
     },
   },
   apis: ['./routes/tabs.js'], // Path to the API docs 

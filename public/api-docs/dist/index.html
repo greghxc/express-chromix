@@ -38,7 +38,7 @@
       if (url && url.length > 1) {
         url = decodeURIComponent(url[1]);
       } else {
-        url = "/api-docs.json";
+        url = "http://petstore.swagger.io/v2/swagger.json";
       }
 
       hljs.configure({
@@ -76,7 +76,7 @@
         jsonEditor: false,
         defaultModelRendering: 'schema',
         showRequestHeaders: false,
-        showOperationIds: true
+        showOperationIds: false
       });
 
       window.swaggerUi.load();
